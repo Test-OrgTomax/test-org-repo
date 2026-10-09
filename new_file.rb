@@ -6,7 +6,7 @@ class PaymentProcessor
 
   def charge(amount)
     response = @api_client.post_charge(amount)
-    response[:status] == 'success'
+    response[:status] == 200
   end
 end
 
