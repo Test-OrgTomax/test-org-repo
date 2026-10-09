@@ -11,7 +11,7 @@ class PaymentProcessorTest < Minitest::Test
   end
 
   def test_successful_checkout
-    user_token = "tok_visa_123"
+    user_token =
     
     # 1. Set the expectation: 
     # .expect(method_name, return_val, expected_arguments_as_array)
