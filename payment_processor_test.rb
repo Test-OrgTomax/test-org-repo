@@ -13,8 +13,6 @@ class PaymentProcessorTest < Minitest::Test
   def test_successful_checkout
     user_token =
     
-    # 1. Set the expectation: 
-    # .expect(method_name, return_val, expected_arguments_as_array)
     @mock_gateway.expect(:charge, { status: "success", id: "ch_999" }, [{ amount: 50, card_token: user_token }])
 
     # 2. Execute the action under test
